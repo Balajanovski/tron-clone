@@ -10,7 +10,7 @@ find_package(SDL2_Image REQUIRED)
 find_package(SDL2_ttf REQUIRED)
 find_package(SDL2_Mixer REQUIRED)
 
-set(SOURCE_FILES main.cpp Model.cpp Model.h View.cpp View.h Controller.cpp Controller.h Player.cpp Player.h Grid.cpp Grid.h)
+set(SOURCE_FILES main.cpp Model.cpp Model.h View.cpp View.h Controller.cpp Controller.h Player.cpp Player.h Includes.h Trail.cpp Trail.h Field.cpp Field.h Coord.h Cleanup.h)
 add_executable(${CMAKE_PROJECT_NAME} ${SOURCE_FILES})
 include_directories(${SDL2_INCLUDE_DIR}
         ${SDL2_IMAGE_INCLUDE_DIR}
