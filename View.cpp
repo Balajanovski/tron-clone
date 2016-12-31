@@ -6,8 +6,8 @@
 #include "Cleanup.h"
 #include <iostream>
 
-View::View(Field &field) {
-    win = SDL_CreateWindow("Tron", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, field.WIDTH, field.HEIGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS);
+View::View(Field *field) : field_ptr(field) {
+    win = SDL_CreateWindow("Tron", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, field->WIDTH, field->HEIGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS);
     if (win == nullptr) {
         logSDLError("Window Initialisation");
         exit(1);
@@ -33,6 +33,44 @@ View::View(Field &field) {
 
     // Render background texture
     render_texture(ren, background, 0, 0);
+}
+
+void View::draw() {
+    SDL_Rect draw_dst;
+    draw_dst.w = TILESIZE;
+    draw_dst.h = TILESIZE;
+
+    for (int y = 0; y < field_ptr->HEIGHT; ++y)
+        for (int x = 0; x < field_ptr->WIDTH; ++x) {
+            switch(field_ptr->field_matrix[y][x]) {
+                case PLAYER_1 :
+                case RED_TRAIL :
+                    // Set the draw color
+                    SDL_SetRenderDrawColor(ren, RED.r, RED.g, RED.b, SDL_ALPHA_OPAQUE);
+
+                    // Set the position to draw
+                    draw_dst.x = x;
+                    draw_dst.y = y;
+
+                    // Draw
+                    SDL_RenderFillRect(ren, &draw_dst);
+                    break;
+                case PLAYER_2 :
+                case GREEN_TRAIL :
+                    // Set the draw color
+                    SDL_SetRenderDrawColor(ren, GREEN.r, GREEN.g, GREEN.b, SDL_ALPHA_OPAQUE);
+
+                    // Set the position to draw
+                    draw_dst.x = x;
+                    draw_dst.y = y;
+
+                    // Draw
+                    SDL_RenderFillRect(ren, &draw_dst);
+                    break;
+            }
+        }
+
+    SDL_RenderPresent(ren);
 }
 
 void View::logSDLError(const std::string &msg) {

@@ -6,7 +6,7 @@
 #include "Model.h"
 
 Model::Model() : player_1(Field::WIDTH / 2 - Field::WIDTH / 4, Field::HEIGHT / 2), player_2(Field::WIDTH / 2 + Field::WIDTH / 4, Field::WIDTH / 2),
-                 controller(&player_1, &player_2)
+                 controller(&player_1, &player_2), view(&field)
 {
     field.field_matrix[player_1.pos.y][player_1.pos.x] = PLAYER_1;
     field.field_matrix[player_2.pos.y][player_2.pos.x] = PLAYER_2;
@@ -46,6 +46,8 @@ void Model::loop() {
         winner = RED;
         return;
     }
+
+    view.draw();
 }
 
 bool Model::isGame_over_flag() const {

@@ -10,6 +10,7 @@
 #include "Trail.h"
 #include "Field.h"
 #include "Controller.h"
+#include "View.h"
 
 class Model {
 public:
@@ -29,6 +30,7 @@ private:
     Team winner;
 
     Controller controller;
+    View view;
 };
 
 
