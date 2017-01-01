@@ -12,6 +12,7 @@
 class View {
 public:
     View(Field *field);
+    ~View();
     void draw();
 private:
     void logSDLError(const std::string &msg);
@@ -26,7 +27,7 @@ private:
     static constexpr SDL_Color GREEN = {0, 255, 0};
     static constexpr int8_t TILESIZE = 1;
 
-    std::shared_ptr<Field> field_ptr;
+    Field *field_ptr = nullptr;
 };
 
 

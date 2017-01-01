@@ -31,6 +31,10 @@ private:
 
     Controller controller;
     View view;
+
+    constexpr static int max_fps = 60;
+    int last_ticks = 0;
+    int current_ticks;
 };
 
 

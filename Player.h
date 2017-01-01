@@ -20,7 +20,7 @@ public:
 
     Coord pos;
 private:
-    Dir direction;
+    Dir direction = UP;
     Team team;
 };
 

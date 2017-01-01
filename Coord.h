@@ -8,9 +8,9 @@
 #include <SDL_config_macos.h>
 
 struct Coord {
-    int8_t x,
-           y;
-    Coord(int x, int y) : Coord::x(x), Coord::y(y) {}
+    int x,
+        y;
+    Coord(int nx, int ny) : x(nx), y(ny) {}
     Coord() = default;
 };
 

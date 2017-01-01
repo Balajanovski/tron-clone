@@ -4,6 +4,6 @@
 
 #include "Trail.h"
 
-Trail::Trail(Team &team, int8_t x, int8_t y) : Trail::team(team), pos(x, y) {}
+Trail::Trail(Team &nteam, int8_t x, int8_t y) : team(nteam), pos(x, y) {}
 
-Trail::Trail(Team &team, Coord pos) : Trail::team(team), Trail::pos(pos) {}
+Trail::Trail(Team &nteam, Coord npos) : team(nteam), pos(npos) {}

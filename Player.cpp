@@ -5,13 +5,13 @@
 #include "Player.h"
 #include "Trail.h"
 
-Player::Player(Coord pos) : Player::pos(pos) {}
+Player::Player(Coord npos) : pos(npos) {}
 
 Player::Player(int x, int y) {
-    Player::pos = Coord(x, y);
+    pos = Coord(x, y);
 }
 
-inline void Player::changeDirection(Dir newDir) {
+void Player::changeDirection(Dir newDir) {
     direction = newDir;
 }
 
@@ -35,4 +35,5 @@ Trail Player::tick() {
             ++pos.x;
             break;
     }
+    return new_trail;
 }

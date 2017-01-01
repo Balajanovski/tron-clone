@@ -2,7 +2,6 @@
 // Created by JULIA BALAJAN on 30/12/2016.
 //
 
-#include <SDL_events.h>
 #include "Controller.h"
 
 Controller::Controller(Player *p1, Player *p2) : p1_pointer(p1), p2_pointer(p2) {}

@@ -7,7 +7,7 @@
 #include <iostream>
 
 View::View(Field *field) : field_ptr(field) {
-    win = SDL_CreateWindow("Tron", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, field->WIDTH, field->HEIGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_BORDERLESS);
+    win = SDL_CreateWindow("Tron", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, field->WIDTH, field->HEIGHT, SDL_WINDOW_SHOWN);
     if (win == nullptr) {
         logSDLError("Window Initialisation");
         exit(1);
@@ -33,6 +33,12 @@ View::View(Field *field) : field_ptr(field) {
 
     // Render background texture
     render_texture(ren, background, 0, 0);
+}
+
+View::~View() {
+    cleanup(ren, win, background);
+    IMG_Quit();
+    SDL_Quit();
 }
 
 void View::draw() {
@@ -71,6 +77,7 @@ void View::draw() {
         }
 
     SDL_RenderPresent(ren);
+    SDL_RenderClear(ren);
 }
 
 void View::logSDLError(const std::string &msg) {

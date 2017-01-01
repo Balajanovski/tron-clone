@@ -16,8 +16,8 @@ public:
 private:
     SDL_Event current_event;
 
-    Player *p1_pointer,
-           *p2_pointer;
+    Player *p1_pointer = nullptr,
+           *p2_pointer = nullptr;
 };
 
 
