@@ -9,8 +9,12 @@
 
 class Field {
 public:
-    static constexpr int WIDTH = 600;
-    static constexpr int HEIGHT = 480;
+    static constexpr int SCREEN_WIDTH = 600;
+    static constexpr int SCREEN_HEIGHT = 480;
+    static constexpr short TILESIZE = 7;
+
+    static constexpr int WIDTH = SCREEN_WIDTH / TILESIZE;
+    static constexpr int HEIGHT = SCREEN_HEIGHT / TILESIZE;
 
     Field();
     Objects field_matrix[HEIGHT][WIDTH];

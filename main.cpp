@@ -5,5 +5,7 @@ int main() {
     while (!model.isGame_over_flag()) {
         model.loop();
     }
+    model.end_screen();
+    SDL_Delay(1000);
     return 0;
 }

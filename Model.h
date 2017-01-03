@@ -15,6 +15,7 @@
 class Model {
 public:
     void loop();
+    void end_screen();
 
     Model();
 
@@ -27,6 +28,7 @@ private:
     Field field;
 
     bool game_over_flag = false;
+
     Team winner;
 
     Controller controller;
@@ -35,6 +37,17 @@ private:
     constexpr static int max_fps = 60;
     int last_ticks = 0;
     int current_ticks;
+
+    int movement_last_time = SDL_GetTicks();
+    int movement_current_time;
+    static constexpr int movement_wait_time = 50;
+
+    int controls_last_time = SDL_GetTicks();
+    int controls_current_time;
+    static constexpr int controls_wait_time = 100;
+
+    void update_matrix();
+    void collision_detection(Player &p);
 };
 
 

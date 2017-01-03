@@ -15,7 +15,7 @@
 #include "Coord.h"
 
 enum Dir {UP = 0, DOWN, LEFT, RIGHT};
-enum Team {RED = 0, GREEN};
+enum Team {RED = 0, GREEN = 1};
 enum Objects {NOTHING = 0, RED_TRAIL, PLAYER_1, GREEN_TRAIL, PLAYER_2};
 
 #endif //TRON_INCLUDES_H

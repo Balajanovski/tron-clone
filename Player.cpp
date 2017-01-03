@@ -3,11 +3,10 @@
 //
 
 #include "Player.h"
-#include "Trail.h"
 
-Player::Player(Coord npos) : pos(npos) {}
+Player::Player(Coord npos, Team nteam) : team(nteam), pos(npos) {}
 
-Player::Player(int x, int y) {
+Player::Player(int x, int y, Team nteam) : team(nteam) {
     pos = Coord(x, y);
 }
 
@@ -36,4 +35,8 @@ Trail Player::tick() {
             break;
     }
     return new_trail;
+}
+
+Team Player::getTeam() const {
+    return team;
 }
