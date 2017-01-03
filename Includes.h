@@ -10,8 +10,6 @@
 #include <SDL_mixer.h>
 #include <SDL_ttf.h>
 #include <SDL_image.h>
-#include <exception>
-#include <stdexcept>
 #include "Coord.h"
 
 enum Dir {UP = 0, DOWN, LEFT, RIGHT};

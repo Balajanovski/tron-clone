@@ -5,8 +5,6 @@
 #ifndef TRON_COORD_H
 #define TRON_COORD_H
 
-#include <SDL_config_macos.h>
-
 struct Coord {
     int x,
         y;
