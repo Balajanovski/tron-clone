@@ -7,7 +7,6 @@
 
 #include "Includes.h"
 #include "Player.h"
-#include "Trail.h"
 #include "Field.h"
 #include "Controller.h"
 #include "View.h"
@@ -15,11 +14,16 @@
 class Model {
 public:
     void loop();
-    void end_screen();
-
+    void endGame();
+	
+	void quit();
+	
     Model();
 
-    bool isGame_over_flag() const;
+    bool isGameOver() const;
+	
+	Player &player1();
+	Player &player2();
 
 private:
     Player player_1,
@@ -46,8 +50,8 @@ private:
     int controls_current_time;
     static constexpr int controls_wait_time = 100;
 
-    void update_matrix();
-    void collision_detection(Player &p);
+    void updatePlayer(Player &p);
+    void checkCollision(Player &p);
 };
 
 

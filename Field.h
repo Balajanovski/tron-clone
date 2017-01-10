@@ -17,7 +17,7 @@ public:
     static constexpr int HEIGHT = SCREEN_HEIGHT / TILESIZE;
 
     Field();
-    Objects field_matrix[HEIGHT][WIDTH];
+    Objects matrix[HEIGHT][WIDTH];
 };
 
 

@@ -6,18 +6,17 @@
 #define TRON_CONTROLLER_H
 
 #include "Includes.h"
-#include "Player.h"
+
+class Model;
 
 class Controller {
 public:
-    void control();
+    void handleEvents();
 
-    Controller(Player *p1, Player *p2);
+    Controller(Model *model);
+	
 private:
-    SDL_Event current_event;
-
-    Player *p1_pointer = nullptr,
-           *p2_pointer = nullptr;
+	Model *model;
 };
 
 

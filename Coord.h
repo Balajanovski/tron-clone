@@ -9,7 +9,6 @@ struct Coord {
     int x,
         y;
     Coord(int nx, int ny) : x(nx), y(ny) {}
-    Coord() = default;
 };
 
 #endif //TRON_COORD_H

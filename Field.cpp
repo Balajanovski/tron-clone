@@ -3,8 +3,9 @@
 //
 
 #include "Field.h"
-#include <cstring>
+
+#include <algorithm>
 
 Field::Field() {
-    std::memset(field_matrix, NOTHING, sizeof(field_matrix[0][0]) * HEIGHT * WIDTH);
+    std::fill_n(&matrix[0][0], WIDTH * HEIGHT, NOTHING);
 }

@@ -1,11 +1,13 @@
 #include "Model.h"
 
+#include <SDL2/SDL_timer.h>
+
 int main() {
     Model model;
-    while (!model.isGame_over_flag()) {
+    while (!model.isGameOver()) {
         model.loop();
     }
-    model.end_screen();
+    model.endGame();
     SDL_Delay(1000);
     return 0;
 }
