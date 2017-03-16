@@ -1,12 +1,14 @@
 # tron-clone
 Hello, I see you have come across my only working, completely bug free, simple game.<br>
-tron-clone is exactly what it says on the tin. It is a remake of the game tron.<hr>
+tron-clone is exactly what it says on the tin. It is a remake of the game tron.
+---
 
 # Disclaimers:
 * This repository was created as a simple test of my C++ and SDL skills. I attempt to make use of the best practises yet I have a long way to go.
 * This repository does have SDL and cmake as dependencies, so, if you do not have them and still wish to play my (underwhelming) game, please install them.
 * This repository has only been tested on Mac OSX, as for Linux I believe it should work and as for Windows, if used with Cygwin the game should (in theory) run properly.
-<hr>
+---
+
 # Quickstart guide:
 To begin playing clone the repository using this command:
 ```
@@ -27,6 +29,7 @@ And to play just run
 ```
 Enjoy!
 
+---
 # Dependencies list:
 * <a href="https://www.libsdl.org/">SDL</a>
 * <a href="https://cmake.org/">CMake</a>
