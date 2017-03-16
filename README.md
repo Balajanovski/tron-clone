@@ -33,6 +33,15 @@ And to play just run
 Enjoy!
 
 ---
+
+# How To Play
+
+Red controls with the arrow keys.<br>
+Green controls with WASD.<br>
+
+Try cut off the other person and get them to collide with your tail or their own.
+
+---
 # Dependencies list:
 * <a href="https://www.libsdl.org/">SDL</a>
 * <a href="https://cmake.org/">CMake</a>
