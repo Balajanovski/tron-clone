@@ -2,7 +2,7 @@
 <p>Hello, I see you have come across my only working, completely bug free, simple game.<br>
 tron-clone is exactly what it says on the tin. It is a remake of the game tron.</p>
 
-[![tron.png](https://s9.postimg.org/5hl0t643z/tron.png)](https://postimg.org/image/ozfo9411n/)
+[![tron.png](https://s14.postimg.org/92dv09hu9/tron.png)](https://postimg.org/image/3qyyfjvrh/)
 
 ---
 
