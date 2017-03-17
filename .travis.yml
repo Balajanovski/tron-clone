@@ -1,1 +1,6 @@
-
+compiler:
+ - clang
+ - gcc
+ 
+ script: cmake . && make && make test
+ 
